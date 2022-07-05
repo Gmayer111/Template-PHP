@@ -1,0 +1,15 @@
+{
+    "name": "gaelmayer/todo-list",
+    "authors": [
+        {
+            "name": "Gael Mayer",
+            "email": "gaelmayer@yahoo.fr"
+        }
+    ],    
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {}
+}
