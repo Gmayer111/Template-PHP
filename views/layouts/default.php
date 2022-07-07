@@ -47,7 +47,8 @@
     </nav>
   </header>
   <main>
-    <h1 class="border text-center m-5 bg-primary text-white">Todo List with PHP and MySQL</h1>    
+    <h1 class="border text-center m-5 bg-primary text-white">Todo List with PHP and MySQL</h1>  
+     
   </main>
 </body>
 </html>
