@@ -47,7 +47,6 @@ class Router {
         $params = $match['params'];
         $router = $this;
         ob_start();
-        print_r($this->viewPath);
         require $this->viewPath . DIRECTORY_SEPARATOR . $view . '.php';
         $content = ob_get_clean();
         require $this->viewPath . DIRECTORY_SEPARATOR . 'layouts/default.php';
