@@ -11,5 +11,6 @@ $whoops->register();
 $router = new Router(dirname(__DIR__). '/views');
 $router
     ->get('/', 'home/index', 'home')
+    ->get('/', 'home/index', 'test')
     ->run();
 

@@ -5,7 +5,7 @@ $title = 'Page d\'accueil';
 ?>
 <div class="d-flex flex-column">
     <h2 class="h5 text-center mb-5 border bg-danger text-white p-2">Ajouter une tâche</h2>
-    <form class="mb-4 d-flex justify-content-around align-items-center">
+    <form action="test" class="mb-4 d-flex justify-content-around align-items-center">
         <div>
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>

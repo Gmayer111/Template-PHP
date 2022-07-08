@@ -1,0 +1,8 @@
+-- Active: 1653754812688@@127.0.0.1@3306@todolist
+CREATE TABLE list 
+(
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    paragraph VARCHAR (255) NOT NULL,
+    date DATETIME NOT NULL
+)
+
