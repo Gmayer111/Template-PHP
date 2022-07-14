@@ -1,16 +1,26 @@
 <?php
 
-use App\Router;
+define('ROOT', dirname(__DIR__));
+require ROOT . '/app/App.php';
 
 require '../vendor/autoload.php';
 
+
+
+    
 $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 $whoops->register();
 
-$router = new Router(dirname(__DIR__). '/views');
-$router
-    ->get('/', 'home/index', 'home')
-    ->get('/', 'home/index', 'test')
-    ->run();
+if (isset($_GET['action'])) {
+    if ($_GET['action'] === 'Contact') {
+        $controller = new App\Controller\ContactController();
+        $controller->ContactView();
+    }
+}else {
+    $controller = new App\Controller\HomeController();
+    $controller->homeView();
+}
+
+
 

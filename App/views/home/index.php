@@ -1,11 +1,9 @@
 <?php
-
-$title = 'Page d\'accueil';
-
+$title = 'Accueil';
 ?>
 <div class="d-flex flex-column">
     <h2 class="h5 text-center mb-5 border bg-danger text-white p-2">Ajouter une tâche</h2>
-    <form action="test" class="mb-4 d-flex justify-content-around align-items-center">
+    <form method="post" action="/" class="mb-4 d-flex justify-content-around align-items-center">
         <div>
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
@@ -13,7 +11,7 @@ $title = 'Page d\'accueil';
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </form>
-    
+
     <div class="list-group d-flex justify-content-center bg-primary">
         <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
         <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
