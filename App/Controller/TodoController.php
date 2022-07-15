@@ -1,14 +1,15 @@
 <?php
 
-
 namespace App\Controller;
 
+use Core\Controller\Controller;
 
-class TodoController {
+class TodoController extends Controller {
 
 
     public function AddList()
     {
-        echo 'ok';
+        $this->render('todo.index');
+        
     }
 }

@@ -21,6 +21,9 @@
               <a class="nav-link active" aria-current="page" href="/">Accueil</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="?action=todo">TODO</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="?action=Contact">Contact</a>
             </li>
           </ul>
