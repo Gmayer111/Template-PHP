@@ -1,8 +1,10 @@
 <?php
 
-namespace App;
+namespace Core;
 
-class App {
+use App\Connection;
+
+class CoreApp {
 
     const DB_NAME = 'todo';
     const DB_USER = 'root';
@@ -11,6 +13,13 @@ class App {
 
     private static $title = 'Mon super titre';
     private static $db;
+
+
+    public static function load()
+    {
+        session_start();
+        require '../vendor/autoload.php';
+    }
 
 
     public function getDb()
@@ -28,13 +37,13 @@ class App {
         header("Location:index.php?action=404");
     }
 
-    public function getTitle()
-    {
-        return self::$title;
-    }
+    // public function getTitle()
+    // {
+    //     return self::$title;
+    // }
 
-    public function setTitle($title)
-    {
-        self::$title = $title;
-    }
+    // public function setTitle($title)
+    // {
+    //     self::$title = $title;
+    // }
 }
