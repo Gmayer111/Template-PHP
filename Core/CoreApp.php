@@ -3,6 +3,7 @@
 namespace Core;
 
 use App\Connection;
+use App\Controller\HomeController;
 
 class CoreApp {
 
@@ -13,12 +14,16 @@ class CoreApp {
 
     private static $title = 'Mon super titre';
     private static $db;
+    protected $viewPath = '../App/Controller/';
 
 
     public static function load()
     {
         session_start();
         require '../vendor/autoload.php';
+        // $whoops = new \Whoops\Run;
+        // $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+        // $whoops->register();
     }
 
 
@@ -28,6 +33,8 @@ class CoreApp {
             self::$db = new Connection(self::DB_NAME, self::DB_USER, self::DB_PASS, self::DB_HOST);
         }
         return self::$db;
+
+        
     }
 
 
@@ -35,6 +42,16 @@ class CoreApp {
     {
         header("HTTP/1.0 404 not found");
         header("Location:index.php?action=404");
+    }
+    public static function loadController($controller, $fn)
+    {
+
+        $controller_from = new ('App\Controller\\' . $controller);
+        print_r($controller_from->homeView());
+            
+
+
+        
     }
 
     // public function getTitle()
