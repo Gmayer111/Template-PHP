@@ -1,5 +1,6 @@
-# Entrainement PHP
+# Template PHP
 
-## TODO-LIST
 
-### HTML / PHP / FETCH JS / BOOTSTRAP
+Pour faciliter la création de projet PHP
+
+- composer update
