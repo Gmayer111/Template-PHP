@@ -19,14 +19,12 @@ class Controller {
 
     }
 
-        // Je dois require le dossier controller
-    // Je passe en param le nom du controleur et le nom de la fonction
-    // public function loadController($controller, $fn)
-    // {
+    public static function loadController(string $controller, string $fn)
+    {
 
-    //     $controller_from = '../App/Controller/' . $controller . '.php';
-    //     $viewFn = $controller_from . '->' . $fn;
-    //     require($viewFn);
-    // }
+        $controller = new ('App\Controller\\' . $controller);
+        // Je passe la variable fn en méthode d'instance
+        echo $controller->${'fn'}();                    
+    }
 
 }

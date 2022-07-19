@@ -26,7 +26,6 @@ class CoreApp {
         // $whoops->register();
     }
 
-
     public function getDb()
     {
         if (self::$db === null) {
@@ -37,22 +36,12 @@ class CoreApp {
         
     }
 
-
     public static function notFound()
     {
         header("HTTP/1.0 404 not found");
         header("Location:index.php?action=404");
     }
-    public static function loadController($controller, $fn)
-    {
-
-        $controller_from = new ('App\Controller\\' . $controller);
-        print_r($controller_from->homeView());
-            
-
-
-        
-    }
+    
 
     // public function getTitle()
     // {

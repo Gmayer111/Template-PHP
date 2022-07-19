@@ -1,6 +1,6 @@
 <?php
 
-
+use Core\Controller\Controller;
 use Core\CoreApp;
 
 define('ROOT', dirname(__DIR__));
@@ -10,12 +10,12 @@ CoreApp::load();
 
 if (isset($_GET['action'])) {
     if ($_GET['action'] === 'Contact') {
-        CoreApp::loadController('ContactController', 'ContactView');
+        Controller::loadController('ContactController', 'ContactView');
     }else if ($_GET['action'] === 'todo') {
-        CoreApp::loadController('TodoController', 'AddList');
+        Controller::loadController('TodoController', 'AddList');
     }
 }else {
-    CoreApp::loadController('HomeController', 'homeView');
+    Controller::loadController('HomeController', 'homeView');
 }
 
 
